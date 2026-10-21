@@ -20,6 +20,8 @@ We question whether there exist any conflicts when learning multi-ref subject-dr
 
 <!-- Given a content reference and a style reference, content-preserving style transfer requires the model to generate stylized outputs with content and  style consistency. We introduced TeleStyle V1 to tackle this problem. However, TeleStyle V1 is trained with photorealistic content reference and artistic style reference, which makes it incapable to cope with artistic content reference and realistic style reference in most cases. In this paper, we designed a Self-Distillation data synthesis strategy to construct such triplets from TeleStyle V1.  Trained with such self-distilled triplets, our TeleStyle V2 supports Content-Style references in the forms of Realistic-and-Realistic (RnR), Realistic-and-Stylized (RnS), Stylized-and-Realistic (SnR), Stylized-and-Stylized (SnS). In addition, we found Distribution Matching Distillation could  preserve the general text-guided image editing capability of the foundation model and fix the content consistency degradation caused by SFT process. Through quantitative evaluations, our TeleStyleV2-QIE-2509-DMD performs at least on par with  Qwen-Image-Edit-2509-DMD, demonstrating strong general image editing skills beyond content-preserving style transfer. We observed the content/style reference order confusion problem in TeleStyle V1 and further introduced prompt enhancer to solve it. TeleStyle V2 uses Qwen-Image-Edit's VLM encoder, Qwen2.5-VL-7B, to generate content prompt and style prompt for free. TeleStyle V2 could achieve comparable style transfer performance with state-of-the-art commercial model, gemini-3-pro-image-preview. -->
 
+ ![alt text](./promptroute.png)
+ our model outperforms Kling Image 3.0 using their test cases.
  <!-- ![alt text](./static/images/compare.png) -->
 <!-- ## Latest News
 - Jan 11, 2026: We release a [free online demo for TeleStyleV2-QIE-2509-Lora-DMD ](https://huggingface.co/spaces/witcherderivia/TeleStyleV2) for diffusers model.  We also release the diffsynth version of [TeleStyle-QIE-2509-Lora](https://huggingface.co/Tele-AI/TeleStyleV2/blob/main/diffsynth-TeleStyleV2-QIE-2509-Lora-bf16.safetensors). Please light a star to support this project if you find the demo useful.
@@ -29,7 +31,7 @@ We question whether there exist any conflicts when learning multi-ref subject-dr
 
 
 - [x] Release PromptRoute Diffusers Lora on QIE 2511.
-- [ ] Release Installation instruction and inference code.
+- [x] Release Installation instruction and inference code.
 - [ ] Release Project Page and tech report.
 
 
